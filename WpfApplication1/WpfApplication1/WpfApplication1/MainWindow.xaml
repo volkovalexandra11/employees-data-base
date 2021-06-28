@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication1.Test"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                  Title="Сотрудники" >
+        
+    
+    <Grid>
+        <DataGrid x:Name="Dg1" SelectionUnit="FullRow" ItemsSource="{Binding}" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия"  Binding="{Binding Surname}" CanUserSort="True"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding SecondName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Button Content="Добавить" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5 0 0 5" Click="ButtonBase_OnClick"></Button>
+        <Button Content="Удалить" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 0 0 5" Click="ButtonDel_OnClick"></Button>
+    </Grid>
+</Window>
+
